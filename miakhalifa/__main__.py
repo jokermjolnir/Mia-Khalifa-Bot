@@ -28,7 +28,7 @@ from miakhalifa.modules.connection import connect_button
 
 PM_START_TEXT = """
 _Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
+_My name is_ *{}*\n_ഞാൻ ഒരു Powerful Telegram bot ആണ്. എന്ന് വേറെ ഗ്രൂപ്പിൽ ഇൽ add ചെയ്യാൻ പറ്റില്ല 🤪🤪 only for tamilrockers group !!_
 _Maintained by_ [{}](tg://user?id={})
 """
 
@@ -59,7 +59,7 @@ def vercheck() -> str:
 
 SOURCE_STRING = """
 ⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/Adithyan1133-ctrl/Mia-Khalifa-Bot)
-⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/Adithyan1133-ctrl/Mia-Khalifa-Bot.git)
+⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/jokermjolnir/Mia-Khalifa-Bot.git)
 """
 
 
@@ -165,7 +165,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             send_start(bot, update)
     else:
         update.effective_message.reply_text("Heya,{} Here..\nHow can I help you? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))]]))
+                                                [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help"https://t me/jokermjolnir")))]]))
 
 def send_start(bot, update):
     #Try to remove old message
@@ -180,7 +180,7 @@ def send_start(bot, update):
     text = PM_START_TEXT
 
     keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🔰Creator🔰",url="https://t.me/Jokermjolnir")]]
-    keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Support Group⚜️",url="https://t.me/FILMROCKERS1"))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
